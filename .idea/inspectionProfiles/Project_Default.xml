@@ -1,0 +1,94 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="ComposeUnknownValues" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="PyBroadExceptionInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="28">
+            <item index="0" class="java.lang.String" itemvalue="djangorestframework" />
+            <item index="1" class="java.lang.String" itemvalue="Django" />
+            <item index="2" class="java.lang.String" itemvalue="psycopg2" />
+            <item index="3" class="java.lang.String" itemvalue="pillow" />
+            <item index="4" class="java.lang.String" itemvalue="Djang" />
+            <item index="5" class="java.lang.String" itemvalue="mysqlclient" />
+            <item index="6" class="java.lang.String" itemvalue="django-mysql" />
+            <item index="7" class="java.lang.String" itemvalue="django-core-headers" />
+            <item index="8" class="java.lang.String" itemvalue="PyJWT" />
+            <item index="9" class="java.lang.String" itemvalue="django-redis" />
+            <item index="10" class="java.lang.String" itemvalue="faker" />
+            <item index="11" class="java.lang.String" itemvalue="stripe" />
+            <item index="12" class="java.lang.String" itemvalue="django-celery-beat" />
+            <item index="13" class="java.lang.String" itemvalue="six" />
+            <item index="14" class="java.lang.String" itemvalue="python-crontab" />
+            <item index="15" class="java.lang.String" itemvalue="amqp" />
+            <item index="16" class="java.lang.String" itemvalue="wcwidth" />
+            <item index="17" class="java.lang.String" itemvalue="kombu" />
+            <item index="18" class="java.lang.String" itemvalue="click" />
+            <item index="19" class="java.lang.String" itemvalue="click-didyoumean" />
+            <item index="20" class="java.lang.String" itemvalue="celery" />
+            <item index="21" class="java.lang.String" itemvalue="django-timezone-field" />
+            <item index="22" class="java.lang.String" itemvalue="prompt-toolkit" />
+            <item index="23" class="java.lang.String" itemvalue="click-repl" />
+            <item index="24" class="java.lang.String" itemvalue="click-plugins" />
+            <item index="25" class="java.lang.String" itemvalue="pyparsing" />
+            <item index="26" class="java.lang.String" itemvalue="vine" />
+            <item index="27" class="java.lang.String" itemvalue="billiard" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="W292" />
+          <option value="E302" />
+          <option value="E305" />
+          <option value="E402" />
+          <option value="E303" />
+          <option value="E501" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N802" />
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyProtectedMemberInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PyShadowingBuiltinsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredNames">
+        <list>
+          <option value="id" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="app.core.admin._" />
+          <option value="django.utils.translation.ugettext_lazy" />
+          <option value="app.core.models.Tag.objects" />
+          <option value="app.core.models.Ingredient.objects" />
+          <option value="app.core.models.Recipe.objects" />
+          <option value="app.recipe.test_ingredients_api.Ingredient" />
+          <option value="app.recipe.serializers.save" />
+          <option value="common.views.LoginAPIView" />
+          <option value="core.models.Product.objects" />
+          <option value="administrator.views.ProductGenericsAPIView.create" />
+          <option value="core.models.Link.objects" />
+          <option value="core.models.Order.objects" />
+          <option value="django.db.models.fields.CharField.__add__" />
+          <option value="core.models.OrderItem.objects" />
+          <option value="asyncio.exceptions.APIException" />
+          <option value="rbt_core.core.addresses.models.Locality.objects" />
+          <option value="celery.*" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
