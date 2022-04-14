@@ -7,7 +7,7 @@ def common_exception_handler(exc, context):
 
     handlers = {
         "NotFound": _handle_not_found_error,
-        "ValidationError": _hande_generic_error,
+        "ValidationError": _handle_generic_error
     }
 
     exception_class = exc.__class__.__name__
