@@ -23,6 +23,6 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
 ]
 
-admin.site.site_header = "Authors Haven API Admin "
+admin.site.site_header = "Authors Haven API Admin"
 admin.site.site_title = "Authors Haven API Admin Portal"
 admin.site.index_title = "Welcome to the Authors Haven API Portal"
