@@ -13,11 +13,9 @@ SECRET_KEY = env(
 
 ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]
 
-# django-insecure-*=g)&&92^k7zze3m+^4d4e-us-l_98t*rg-b5oah$-ho$-n#+^
-
-# EMAIL_BACKEND = "djcelery_email.backends.CeleryEmailBackend"
-# EMAIL_HOST = env("EMAIL_HOST", default="mailhog")
-# EMAIL_PORT = env("EMAIL_PORT")
-# DEFAULT_FROM_EMAIL = ""
-# DOMAIN = env("DOMAIN")
-# SITE_NAME = "Authors Haven"
+EMAIL_BACKEND = "djcelery_email.backends.CeleryEmailBackend"
+EMAIL_HOST = env("EMAIL_HOST", default="mailhog")
+EMAIL_PORT = env("EMAIL_PORT")
+DEFAULT_FROM_EMAIL = "ifssouy002@gmail.com"
+DOMAIN = env("DOMAIN")
+SITE_NAME = "Authors Haven"
