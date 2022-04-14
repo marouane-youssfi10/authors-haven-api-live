@@ -127,9 +127,9 @@ USE_TZ = True
 
 SITE_ID = 1
 
-ADMIN_URL = "superscret/"
+ADMIN_URL = "supersecret/"
 
-ADMINS = [("""Alpha Ogilo""", "api.imperfect@gmail.com")]
+ADMINS = [("""Ifssouy""", "api.imperfect@gmail.com")]
 
 
 MANAGERS = ADMINS
@@ -154,6 +154,8 @@ MEDIA_ROOT = str(ROOT_DIR / "mediafiles")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_URLS_REGEX = r"^/api/.*$"
+
+AUTH_USER_MODEL = "users.User"
 
 LOGGING = {
     "version": 1,

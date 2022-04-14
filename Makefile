@@ -21,3 +21,31 @@ collectstatic:
 
 superuser:
 	compose -f local.yml run --rm api python3 manage.py createsuperuser
+
+down-v:
+	docker compose -f local.yml down -v
+
+volume:
+	docker volume inspect authors-haven-api_local_postgres_data
+
+authors-db:
+	docker compose -f local.yml exec postgres psql --username=ifssouy --dbname=author_live
+
+flake8:
+	docker compose -f local.yml exec api flake8
+
+black-diff:
+	docker compose -f local.yml exec api black --diff --exclude=migrations .
+
+black:
+	docker compose -f local.yml exec api black --exclude=migrations .
+
+isort-check:
+	docker compose -f local.yml exec api isort . --check-only --skip env --skip migrations
+
+isort-diff:
+	docker compose -f local.yml exec api isort . --diff --skip env --skip migrations
+
+isort:
+	docker compose -f local.yml exec api isort . --skip env --skip migrations
+
