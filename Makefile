@@ -11,28 +11,31 @@ show_logs:
 	docker compose -f local.yml logs
 
 migrate:
-	compose -f local.yml run --rm api python3 manage.py migrate
+	docker compose -f local.yml run --rm api python3 manage.py migrate
 
 makemigrations:
-	compose -f local.yml run --rm api python3 manage.py makemigrations
+	docker compose -f local.yml run --rm api python3 manage.py makemigrations
 
 collectstatic:
-	compose -f local.yml run --rm api python3 manage.py collectstatic --no-input --clear
+	docker compose -f local.yml run --rm api python3 manage.py collectstatic --no-input --clear
 
 superuser:
-	compose -f local.yml run --rm api python3 manage.py createsuperuser
+	docker compose -f local.yml run --rm api python3 manage.py createsuperuser
 
 down-v:
 	docker compose -f local.yml down -v
 
 volume:
-	docker volume inspect authors-haven-api_local_postgres_data
+	docker volume inspect authors-src_local_postgres_data
 
 authors-db:
-	docker compose -f local.yml exec postgres psql --username=ifssouy --dbname=author_live
+	docker compose -f local.yml exec postgres psql --username=alphaogilo --dbname=authors-live
 
 flake8:
-	docker compose -f local.yml exec api flake8
+	docker compose -f local.yml exec api flake8 .
+
+black-check:
+	docker compose -f local.yml exec api black --check --exclude=migrations .
 
 black-diff:
 	docker compose -f local.yml exec api black --diff --exclude=migrations .
@@ -48,4 +51,3 @@ isort-diff:
 
 isort:
 	docker compose -f local.yml exec api isort . --skip env --skip migrations
-
