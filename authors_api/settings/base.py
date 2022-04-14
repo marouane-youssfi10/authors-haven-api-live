@@ -35,6 +35,7 @@ THIRD_PARTY_APPS = [
     "phonenumber_field",
     "drf_yasg",
     "corsheaders",
+    "djcelery_email",
 ]
 
 LOCAL_APPS = [
@@ -162,6 +163,8 @@ CELERY_RESULT_URL = env("CELERY_BACKEND")
 CELERY_TIMEZON = "Africa/Meknes"
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
+CELERY_RESULT_SERIALIZER = "json"
+
 
 LOGGING = {
     "version": 1,
