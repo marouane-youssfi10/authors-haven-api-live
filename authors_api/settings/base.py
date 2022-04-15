@@ -38,7 +38,7 @@ THIRD_PARTY_APPS = [
     "djoser",
     "rest_framework_simplejwt",
     "haystack",
-    "dry_haystack",
+    "drf_haystack",
 ]
 
 LOCAL_APPS = [
