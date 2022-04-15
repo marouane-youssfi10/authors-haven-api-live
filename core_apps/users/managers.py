@@ -40,15 +40,6 @@ class CustomUserManager(BaseUserManager):
         extra_fields.setdefault("is_staff", False)
         extra_fields.setdefault("is_superuser", False)
         user.save(using=self._db)
-        print('----------------------------------------------------------')
-        print('username     = ', user.username)
-        print('first_name   = ', user.first_name)
-        print('last_name    = ', user.last_name)
-        print('email        = ', user.email)
-        print('is_staff     = ', user.is_staff)
-        print('is_superuser = ', user.is_superuser)
-        print('is_active    = ', user.is_active)
-        print('----------------------------------------------------------')
         return user
 
     def create_superuser(self, username, first_name, last_name, email, password, **extra_fields):
