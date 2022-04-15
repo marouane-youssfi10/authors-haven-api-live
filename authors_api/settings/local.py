@@ -1,7 +1,6 @@
 from .base import *
 from .base import env
 
-
 DEBUG = True
 
 # SECURITY WARNING: keep the secret key used in production secret!

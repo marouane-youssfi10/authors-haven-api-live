@@ -1,4 +1,5 @@
 from rest_framework import serializers
+
 from core_apps.articles.models import Article, ArticleViews
 from core_apps.comments.serializers import CommentListSerializer
 from core_apps.ratings.serializers import RatingSerializer

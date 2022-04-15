@@ -1,8 +1,9 @@
 class ArticleReadTimeEngine:
-
     def __init__(self, article):
         self.article = article
-        self.word_per_minute = 250
+
+        self.words_per_minute = 250
+
         self.banner_image_adjustment_time = round(1 / 6, 3)
 
     def check_article_has_banner_image(self):
@@ -32,6 +33,7 @@ class ArticleReadTimeEngine:
         details.extend(self.get_body().split())
         details.extend(self.get_description().split())
         details.extend(self.get_tags())
+        return details
 
     def get_read_time(self):
         word_length = len(self.get_article_details())
@@ -42,9 +44,12 @@ class ArticleReadTimeEngine:
             time_to_read = word_length / self.words_per_minute
             if time_to_read < 1:
                 read_time = (
-                        str(round((time_to_read + self.banner_image_adjustment_time) * 60))
-                        + " second(s)"
+                    str(round((time_to_read + self.banner_image_adjustment_time) * 60))
+                    + " second(s)"
                 )
             else:
-                read_time = (str(round(time_to_read + self.banner_image_adjustment_time)) + " minute(s)")
+                read_time = (
+                    str(round(time_to_read + self.banner_image_adjustment_time))
+                    + " minute(s)"
+                )
             return read_time
