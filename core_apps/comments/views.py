@@ -54,6 +54,7 @@ class CommentUpdateDeleteAPIView(generics.GenericAPIView):
         except Comment.DoesNotExist:
             raise NotFound("Comment does not exist")
 
+        # fields = ["id", "author", "article", "body", "created_at", "updated_at"]
         data = request.data
         serializer = self.serializer_class(comment_to_update, data=data, partial=True)
         serializer.is_valid(raise_exception=True)
